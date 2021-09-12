@@ -1,0 +1,284 @@
+:root {
+
+    /* Font-Style */
+    --font-style : font-family: 'Roboto', sans-serif;
+
+    /* Color */
+    --white-color : #fff;
+    --black-color : #181818;
+    --blue-color : #3E87A5;
+    --red-color : #2B0000;
+    --grey-dark-color : #181818;
+    --grey-light-color : #e2e2e2;
+    --youtube-color : #FF0000;
+    
+
+    /* Size */ 
+    --padding : 12px;
+    --intro-size : 36px;
+
+    /* Font-size */
+    --font-large : 18px;
+    --font-medium : 14px;
+    --font-small : 12px;
+    --font-micro : 10px;
+
+
+}
+
+*{
+    /* 전체적으로 적용해야하는 스타일 */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-style);
+}
+
+ul{
+    list-style: none;
+}
+
+button,
+button:focus{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--white-color);
+}
+
+
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo{
+    font-size: var(--font-large);
+}
+
+header .logo i{
+    color: var(--youtube-color);
+}
+
+header .icons i{
+    margin-right: var(--padding);
+}
+
+
+
+
+
+
+/* Video */
+
+/* 아이템을 반응형으로 만들 때에는 % 사용하는 것이 좋다 */
+.video{
+    /* 아래 두 속성을 주면 스크롤을 내릴 때 영상이 위에 고정됨 */
+    /* 중요 : position: sticky;를 사용할 때에는 요소가 붙어야 할 위치를 지정해주어야 함 */
+    /* top:0 을 줌으로써 영상이 붙을 위치를 지정해줌 */
+    position: sticky;
+    top:0;
+
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+.video video{
+    /* container에 맞게 꽉 채워서 보여준다 */
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+/* info */
+/* body 바로 아래 .info 에만 스타일 적용 */
+body .infoAndUpNext > .info{
+    padding: var(--padding);
+}
+.info .metadata .hashTags{
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashTags li{
+    margin-right: var(--padding);
+}
+
+/* 범위를 최대한 구체적으로 작성하는 것이 좋음
+이유 : 같은 이름의 id, class들에 모두 스타일이 적용되는 것을 방지 */
+
+.info .metadata .titleAndBtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .metadata .titleAndBtn .title{
+   font-size: var(--font-medium);
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   overflow: hidden;
+   margin-right: var(--padding);
+}
+
+
+.info .metadata .titleAndBtn .moreBtn{
+    /* ?? ???? */
+    height: 100%;
+}
+
+.info .metadata .views{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .actions{
+    display: flex;
+    /* 중요** space-between 을 사용하면 요소마다 간격 + 요소가 왼쪽에 붙음 */
+    /* space-around를 주면 요소마다 간격 + 요소 중앙 배치 됨 */
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+.info .actions button{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.info .actions button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: 16px;
+}
+
+.info .actions button i.active{
+    color: var(--blue-color);
+}
+
+/* Channel */
+.channel{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+    padding: var(--padding);
+}
+
+.channel .metadata{
+    display: flex;
+    align-items: center;
+}
+
+
+.channel .metadata img{
+    width: var(--intro-size);
+    height:  var(--intro-size);
+    border-radius: 50%;
+}
+
+.channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata .info .name{
+    font-size: var(--font-medium);
+}
+.channel .metadata .info .subscribers{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.channel .subscribe{
+    text-transform: uppercase;
+    color: var(--youtube-color);
+}
+
+/* UpNext */
+
+.UpNext{
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* .UpNext의 직계 자식 요소에만 적용 */
+.UpNext > .title{
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: var(--padding);
+}
+
+.UpNext .item{
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.UpNext .item .img{
+   flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+
+/* img 태그에  width: 100%;를 적용하지 않으면  */
+/* 이미지의 크기가 반응형으로 작동하지 않음 */
+.UpNext .item .img img{
+    width: 100%;
+     
+ }
+.UpNext .item .info{
+    flex: 1 1 65%;
+}
+
+.UpNext .item .moreBtn{
+    flex: 1 1 5%;
+}
+
+
+.UpNext .item .info{
+   display: flex;
+   flex-direction: column;
+}
+
+.UpNext .item .info .title{
+    font-size: var(--font-large);
+ }
+
+ .UpNext .item .info .name,
+ .UpNext .item .info .views{
+    font-size: var(--font-medium);
+    color:var(--grey-dark-color);
+ }
+
+ .UpNext .item i{
+   height: 100%;
+ }
+
+ .infoAndUpNext{
+     display: flex;
+     flex-direction: column;
+ }
+
+ @media screen and (min-width : 768px){
+    .infoAndUpNext{
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+
+    .infoAndUpNext .info{
+        flex: 1 1 50%;
+    }
+    .infoAndUpNext .UpNext{
+        flex: 1 1 50%;
+    }
+ }
