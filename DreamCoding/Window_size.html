@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Size</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <style>
+        .tag{
+            display: inline-block;
+            background-color: #ddd;
+            padding: 16px;
+            font-size: 38px;
+        }
+        .row{
+            display: block;
+        }
+
+    </style>
+        
+    
+</head>
+<body>
+
+    <div class="tag">
+        <span class="row">window.screen : <span id="screen"></span></span>
+        <span class="row">window.outer : <span id="outer"></span></span>
+        <span class="row">window.inner : <span id="inner"></span></span>
+        <span class="row">documentElement.clientWidth : <span id="clientWidth"></span></span>
+    
+    </div>
+    <script>
+        const tag = document.querySelector('.tag');
+        function updateTag(){
+            tag.innerHTML = `
+            window.screen : ${window.screen.width},  ${window.screen.height} <br/>
+            window.outer : ${window.outerWidth},  ${window.outerHeight} <br/>
+            window.inner : ${window.innerWidth},  ${window.innerHeight} <br/>
+            documentElement.clientWidth : ${document.documentElement.clientWidth },  ${document.documentElement.clientHeight} <br/>
+            `;
+        }
+
+
+        window.addEventListener('resize',() => {
+              // 사이즈가 변경 될 때마다 콜백함수 호출
+            updateTag();
+        })
+        // 페이지가 처음 로딩이 되면 실행될 메서드
+        updateTag();
+
+    </script>
+
+    
+</body>
+</html>

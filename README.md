@@ -29,3 +29,20 @@
 ### Under_768px
 
 ![Under_768px](youtube/capture/Under_768px.JPG)
+
+## Day3
+
+2021.09.18
+
+브라우저 크기 출력
+
+### Up_768px
+
+![Full_size](DreamCoding/capture/Window_size.JPG)
+
+| 크기          |                       영역                       |
+| ------------- | :----------------------------------------------: |
+| `screen`      |         브라우저 외부 screen의 전체 크기         |
+| `outer`       |           브라우저를 띄우는 가장 외곽            |
+| `inner`       |  브라우저 내부의 contents영역(스크롤 **포함**))  |
+| `clientWidth` | 브라우저 내부의 contents영역(스크롤 ~~마포함~~)) |
