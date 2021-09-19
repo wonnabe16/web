@@ -75,3 +75,19 @@
 | `pageY`   |   **987**    |
 | `clientX` |      80      |
 | `clientY` |   **268**    |
+
+## Day4
+
+2021.09.20
+
+좌표 활용하기
+
+### 마우스 움직여 현재 좌표 출력하기
+
+![Full_size](DreamCoding/capture/mousemove.JPG)
+
+### 버튼 클릭 시 토끼가 있는 곳을 찾아가기
+
+![Full_size](DreamCoding/capture/findRabbit.JPG)
+
+![Full_size](DreamCoding/capture/findRabbit2.JPG)
