@@ -78,7 +78,7 @@
 
 ## Day4
 
-2021.09.20
+2021.09.19
 
 좌표 활용하기
 
@@ -91,3 +91,11 @@
 ![Full_size](DreamCoding/capture/findRabbit.JPG)
 
 ![Full_size](DreamCoding/capture/findRabbit2.JPG)
+
+## Day5
+
+2021.09.20
+
+### DOM / DOM_Tree에 대해 이해하기
+
+![Full_size](DreamCoding/capture/DOM_Nodes.JPG)
