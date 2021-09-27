@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Check List</title>
+</head>
+<body>
+    <!-- 상단 : 로고 -->
+    <header>
+        <div class="logo">
+            <span>Check List</span>
+        </div>
+    </header>
+    <!-- 체크 리스트 -->
+    <section>
+        <ul>
+            
+        </ul>
+    </section>
+
+   
+    
+    <!-- 추가하기 버튼  -->
+    <footer>
+        <div class="btn_add">
+            <span>+ Add List</span>
+        </div>
+    </footer>
+    <script>
+        const add = document.querySelector('.btn_add');
+            add.addEventListener('click',()=>{
+                //console.log('clicked');
+                const ul = document.querySelector('ul');
+                
+                const input = document.createElement('input');
+                const span_add = document.createElement('span');
+                input.setAttribute('type','text');//<input type='text'/>
+                ul.appendChild(input);
+                span_add.setAttribute('class','add');
+                span_add.textContent='add';
+                ul.appendChild(span_add);
+                span_add.addEventListener('click',()=>{
+                    console.log('clicked');
+                    const content = input.value;
+                    const list = document.createElement('span');
+                    const li =  document.createElement('li');
+                    const del = document.createElement('span');
+                    del.setAttribute('class','del');
+                    del.textContent='-';
+                    list.textContent=content;
+                    input.remove();
+                    span_add.remove();
+                    li.appendChild(list);
+                    li.appendChild(del);
+                    ul.appendChild(li);
+                })
+            })
+        
+            
+    </script>
+</body>
+</html>

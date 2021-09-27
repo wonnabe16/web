@@ -34,11 +34,39 @@
   </head>
   <body>
     <section>
-      <img src="img/avatar.png" alt="avatar" />
+      <!-- <img src="img/avatar2.png" alt="avatar"/> -->
+      <img src="img/avatar.png" alt="avatar"/>
       <h1 id="brand">Dream Coding</h1>
     
       <h3>Don't forget to code your dream</h3>
     </section>
     <span>Hello World!</span>
+    <script>
+      // const image= document.querySelectorAll('img');
+      // console.log(image);
+
+      // 1. section 태그 안에 가장 하위 자식 요소로 추가된다
+      const section = document.querySelector('section');
+      const h2 = document.createElement('h2');// <h2></h2>
+      h2.setAttribute('class','title'); // <h2 class="title"></h2>
+      h2.textContent = "This is a title"; // <h2 class="title">This is a title</h2>
+ 
+      // section.append(h2);
+
+      //append(최신버전),appendChild (이전버전)
+
+
+      // 2. 중간에 삽입하고 싶다면 
+      const h3 = document.querySelector('h3');
+      // 부모.insertBefore(삽입할 노드, 다음에 올 노드)
+      section.insertBefore(h2,h3);
+
+      // Dom의 요소는 Element이고 div인지 img인지에 따라서 
+      // HTMLDivElement가 될 수 도 있고 HTMLImage 이런 다양한 Element가 될 수 있다.
+      
+      // 결국 node와 eventTarget이다
+
+      
+    </script>
   </body>
 </html>

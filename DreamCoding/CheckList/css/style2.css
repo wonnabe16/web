@@ -1,0 +1,76 @@
+:root {
+  --background-color: #272327;
+  --font-size: 24px;
+  --font-color: white;
+}
+
+* {
+  /* padding이나 border-size가 width나 height에 포함될 수 있도록 */
+  box-sizing: border-box;
+}
+ul {
+  /* padding도 없어지고, list style도 없어짐 */
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: var(--background-color);
+  text-align: center;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.list {
+  /* list는 section태그 : block level */
+  width: 400px;
+  margin: auto;
+  background-color: #272327;
+  border-radius: 20px;
+}
+
+.header {
+  height: 48px;
+  padding: 8px;
+  font-size: var(--font-size);
+  background: rgb(173, 134, 8);
+  background: linear-gradient(90deg, rgba(173, 134, 8, 1) 0%, rgba(6, 163, 201, 1) 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.items {
+  color: var(--font-color);
+  height: 500px;
+  /* 아이템이 많아지면 스크롤이 자동으로 생길 수 있도록  */
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px 12px 32px;
+}
+
+.item_divider {
+  width: 90%;
+  height: 2px;
+  background-color: #e2a10a;
+  /* div는 block level이기 때문에 자동으로 오른쪽에 margin이 생긴다 */
+  margin: auto;
+}
+.item_delete {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.fa-minus {
+  color: #e2a10a;
+}
+.footer {
+  background: rgb(173, 134, 8);
+  background: linear-gradient(90deg, rgba(173, 134, 8, 1) 0%, rgba(6, 163, 201, 1) 100%);
+  border-radius: 0 0 20px 20px;
+}
