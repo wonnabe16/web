@@ -17,6 +17,7 @@ ul {
 body {
   background-color: var(--background-color);
   text-align: center;
+  margin-top: 100px;
 }
 button {
   outline: none;
@@ -29,6 +30,10 @@ button {
   margin: auto;
   background-color: #272327;
   border-radius: 20px;
+  /* css shadow generator size */
+  -webkit-box-shadow: 10px 7px 16px 0px rgba(74, 74, 74, 1);
+  -moz-box-shadow: 10px 7px 16px 0px rgba(74, 74, 74, 1);
+  box-shadow: 10px 7px 16px 0px rgba(74, 74, 74, 1);
 }
 
 .header {
@@ -64,13 +69,47 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  font-size: 16px;
+  transition: all 300ms ease-in;
+}
+
+.item_delete:hover {
+  transform: scale(1.1);
+}
+
+.item_delete:hover .fa-minus {
+  color: rgba(6, 163, 201, 1);
 }
 
 .fa-minus {
   color: #e2a10a;
 }
+
 .footer {
   background: rgb(173, 134, 8);
   background: linear-gradient(90deg, rgba(173, 134, 8, 1) 0%, rgba(6, 163, 201, 1) 100%);
   border-radius: 0 0 20px 20px;
+}
+
+/* input 요소에 스타일 주기 */
+.footer_input {
+  width: 100%;
+  height: 32px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  padding: 0 16px;
+}
+
+.footer_button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  transition: transform 300ms ease-in;
+}
+.footer_button:hover {
+  transform: scale(1.1);
+  color: rgb(95, 72, 38);
 }

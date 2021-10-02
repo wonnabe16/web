@@ -99,3 +99,11 @@
 ### DOM / DOM_Tree에 대해 이해하기
 
 ![Full_size](DreamCoding/capture/DOM_Nodes.JPG)
+
+## Day6
+
+2021.10.02
+
+### 간단한 체크리스트 만들기(리스트 추가, 삭제 기능)
+
+![Full_size](DreamCoding/capture/checkList.JPG)
